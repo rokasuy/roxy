@@ -1,0 +1,24 @@
+local player = game.Players.LocalPlayer
+local chat = player:FindFirstChild("PlayerGui"):FindFirstChild("ChatBar", true)
+local duration = .05
+local slurs = {
+"Genshin Impact Player",
+"Hates Morbius",
+" ",
+"Fuck",
+"Shit",
+"Ass",
+"Vagina",
+"Penis",
+"Cock",
+"Cum",
+"Semen",
+"Sex",
+"Sexual Intercourse",
+}
+
+while task.wait(duration) do
+chat:CaptureFocus()
+chat.Text = slurs[math.random(1, #slurs)]
+chat:ReleaseFocus(true)
+end
